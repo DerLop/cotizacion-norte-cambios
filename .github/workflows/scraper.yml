@@ -5,6 +5,10 @@ on:
     - cron: '0 * * * 1-5'
   workflow_dispatch:
 
+# Definimos la variable a nivel global del flujo para mutar el comportamiento de todas las acciones
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 permissions:
   contents: write
 
@@ -18,16 +22,13 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24 # <-- Cambiado de 20 a 24 para evitar la obsolescencia
+          node-version: 24
 
       - name: Instalar dependencias
         run: npm install
 
       - name: Ejecutar el Scraping
         run: node scraper.js
-        env:
-          # <-- Fuerza a las librerías internas a usar el motor Node 24 de forma segura
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true' 
 
       - name: Guardar cambios y subirlos a GitHub
         run: |
