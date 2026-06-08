@@ -1,0 +1,36 @@
+name: Actualizar Cotizaciones
+
+on:
+  schedule:
+    # Se ejecuta de forma automática cada hora (de lunes a viernes)
+    - cron: '0 * * * 1-5'
+  workflow_dispatch: # Te permite ejecutarlo manualmente desde la pestaña "Actions"
+
+permissions:
+  contents: write # Permiso crucial para que el bot pueda guardar el archivo JSON
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar el Scraping
+        run: node scraper.js
+
+      - name: Guardar cambios y subirlos a GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git add cotizaciones.json
+          git commit -m "Bot: Cotizaciones actualizadas automáticamente" || exit 0
+          git push
