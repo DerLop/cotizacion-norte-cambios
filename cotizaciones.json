@@ -1,180 +1,45 @@
 {
   "success": true,
   "fuente": "https://www.nortecambios.com.py/",
-  "actualizado": "2026-06-08T01:12:25.577Z",
+  "actualizado": "2026-06-08T01:20:26.948Z",
   "data": [
     {
       "sucursal": "Pedro Juan Caballero",
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7955,
-          "venta": 8035
+          "compra": 6030,
+          "venta": 6150
         },
         {
           "moneda": "Real BRL",
-          "compra": 1230,
-          "venta": 1300
+          "compra": 1150,
+          "venta": 1205
+        },
+        {
+          "moneda": "Real • Dólar Americano BRL • USD",
+          "compra": 5.11,
+          "venta": 5.27
         },
         {
           "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
+          "compra": 7400,
+          "venta": 7700
         },
         {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Asunción",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7940,
-          "venta": 8020
+          "moneda": "Real • Euro BRL • EUR",
+          "compra": 6.07,
+          "venta": 6.7
         },
         {
-          "moneda": "Real BRL",
-          "compra": 1232,
-          "venta": 1302
+          "moneda": "Dólar Americano • Euro USD • EUR",
+          "compra": 1.19,
+          "venta": 1.27
         },
         {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Ciudad del Este",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7955,
-          "venta": 8035
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1234,
-          "venta": 1304
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Bella Vista Norte",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7940,
-          "venta": 8020
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1236,
-          "venta": 1306
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Capitán Bado",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7955,
-          "venta": 8035
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1238,
-          "venta": 1308
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Concepción",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7940,
-          "venta": 8020
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1240,
-          "venta": 1310
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Saltos del Guairá",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 7955,
-          "venta": 8035
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1242,
-          "venta": 1312
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 8200,
-          "venta": 8650
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 3.5,
-          "venta": 5.5
+          "moneda": "Peso Argentino ARG",
+          "compra": 4,
+          "venta": 6
         }
       ]
     }
