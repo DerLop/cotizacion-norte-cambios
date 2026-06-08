@@ -1,7 +1,7 @@
 {
   "success": true,
   "fuente": "https://www.nortecambios.com.py/",
-  "actualizado": "2026-06-08T01:27:44.904Z",
+  "actualizado": "2026-06-08T01:33:56.355Z",
   "data": [
     {
       "sucursal": "Pedro Juan Caballero",
@@ -10,6 +10,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6030,
           "venta": 6150
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1140,
+          "venta": 1200
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -20,6 +35,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6060,
           "venta": 6150
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1141,
+          "venta": 1201
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -30,6 +60,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6050,
           "venta": 6150
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1142,
+          "venta": 1202
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -40,6 +85,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6000,
           "venta": 6130
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1143,
+          "venta": 1203
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -50,6 +110,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6000,
           "venta": 6120
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1144,
+          "venta": 1204
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -60,6 +135,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 5980,
           "venta": 6150
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1145,
+          "venta": 1205
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     },
@@ -70,6 +160,21 @@
           "moneda": "Dólar Americano USD",
           "compra": 6010,
           "venta": 6120
+        },
+        {
+          "moneda": "Real BRL",
+          "compra": 1146,
+          "venta": 1206
+        },
+        {
+          "moneda": "Euro EUR",
+          "compra": 7300,
+          "venta": 7600
+        },
+        {
+          "moneda": "Peso Argentino ARS",
+          "compra": 4,
+          "venta": 4.8
         }
       ]
     }
