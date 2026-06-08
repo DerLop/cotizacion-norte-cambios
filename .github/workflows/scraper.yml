@@ -32,8 +32,7 @@ jobs:
       - name: Guardar cambios y subirlos a GitHub
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
           git add cotizaciones.json
-          # Con esta línea corregida, si no hay cotizaciones nuevas, el bot no colapsará
-          git commit -m "Bot: Cotizaciones actualizadas automáticamente" || echo "Sin cambios en el mercado"
-          git push || echo "Repositorio ya actualizado"
+          git commit -m "Bot: Cotizaciones actualizadas automáticamente" || exit 0
+          git push
