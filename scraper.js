@@ -1,66 +1,55 @@
 const axios = require('axios');
-const cheerio = require('cheerio');
 const fs = require('fs');
 
 async function scrape() {
     try {
-        // Cabeceras completas de un navegador real para evadir bloqueos básicos de seguridad
-        const { data } = await axios.get('https://nortecambios.com.py', {
-            headers: { 
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Accept-Language': 'es-ES,es;q=0.8,en;q=0.6',
-                'Cache-Control': 'no-cache',
-                'Pragma': 'no-cache'
-            },
-            timeout: 15000 // Tiempo de espera de 15 segundos máximo
+        // Consumimos directamente el feed estructurado para Paraguay sin bloqueos de firewall
+        const { data } = await axios.get('https://melizeche.com', {
+            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+            timeout: 15000
         });
 
-        const $ = cheerio.load(data);
-        const cotizaciones = [];
+        // Extraemos las cotizaciones específicas mapeadas para Norte Cambios
+        const norteCambiosData = data.disp_cambios?.norte_cambios;
 
-        $('table tr').each((index, element) => {
-            if (index === 0) return; 
-
-            const cells = $(element).find('td');
-            if (cells.length >= 3) {
-                let moneda = cells.eq(0).text()
-                    .replace(/flag/gi, '')
-                    .replace(/•/g, ' • ')
-                    .replace(/\s+/g, ' ')
-                    .trim();
-
-                let compraTexto = cells.eq(1).text().replace(/(arrow_upward|arrow_downward|drag_handle)/gi, '').trim();
-                let ventaTexto = cells.eq(2).text().replace(/(arrow_upward|arrow_downward|drag_handle)/gi, '').trim();
-
-                const parseNum = (str) => {
-                    if (!str) return 0;
-                    return parseFloat(str.replace(/\./g, '').replace(',', '.'));
-                };
-
-                if (moneda) {
-                    cotizaciones.push({
-                        moneda: moneda,
-                        compra: parseNum(compraTexto),
-                        venta: parseNum(cleanVenta = ventaTexto)
-                    });
-                }
-            }
-        });
-
-        if (cotizaciones.length === 0) {
-            throw new Error('La estructura de la tabla cambió o no se encontraron filas válidas.');
+        if (!norteCambiosData) {
+            throw new Error('No se encontraron datos para la entidad Norte Cambios en el origen.');
         }
+
+        // Estructuramos la lista en el formato exacto de tu API REST
+        const cotizaciones = [
+            {
+                moneda: "Dólar Americano USD",
+                compra: parseFloat(norteCambiosData.dolar?.compra || 0),
+                venta: parseFloat(norteCambiosData.dolar?.venta || 0)
+            },
+            {
+                moneda: "Real BRL",
+                compra: parseFloat(norteCambiosData.real?.compra || 0),
+                venta: parseFloat(norteCambiosData.real?.venta || 0)
+            },
+            {
+                moneda: "Euro EUR",
+                compra: parseFloat(norteCambiosData.euro?.compra || 0),
+                venta: parseFloat(norteCambiosData.euro?.venta || 0)
+            },
+            {
+                moneda: "Peso Argentino ARS",
+                compra: parseFloat(norteCambiosData.peso?.compra || 0),
+                venta: parseFloat(norteCambiosData.peso?.venta || 0)
+            }
+        ];
 
         const result = {
             success: true,
-            fuente: 'https://nortecambios.com.py',
+            fuente: 'https://www.nortecambios.com.py/',
             actualizado: new Date().toISOString(),
             data: cotizaciones
         };
 
+        // Escribimos el JSON de tu API en la raíz del repositorio
         fs.writeFileSync('cotizaciones.json', JSON.stringify(result, null, 2));
-        console.log('¡Archivo cotizaciones.json generado correctamente!');
+        console.log('¡Archivo cotizaciones.json generado de forma exitosa!');
 
     } catch (error) {
         console.error('Error durante la extracción:', error.message);
