@@ -1,88 +1,13 @@
 {
   "success": true,
-  "fuente": "https://www.nortecambios.com.py/ (Sincronización Matricial Calibrada)",
-  "actualizado": "2026-06-08T01:45:35.110Z",
+  "fuente": "https://www.nortecambios.com.py/ (Filtro Sucursal Asunción)",
+  "actualizado": "2026-06-08T01:52:04.352Z",
   "data": [
-    {
-      "sucursal": "Pedro Juan Caballero",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 6030,
-          "venta": 6150
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1150,
-          "venta": 1205
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
     {
       "sucursal": "Asunción",
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 6000,
-          "venta": 6140
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1135,
-          "venta": 1200
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Ciudad del Este",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 6040,
-          "venta": 6155
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1155,
-          "venta": 1210
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Bella Vista Norte",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
           "compra": 6030,
           "venta": 6150
         },
@@ -95,86 +20,6 @@
           "moneda": "Euro EUR",
           "compra": 7400,
           "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Capitán Bado",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 6030,
-          "venta": 6150
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1150,
-          "venta": 1205
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Concepción",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 6010,
-          "venta": 6145
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1140,
-          "venta": 1200
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
-        }
-      ]
-    },
-    {
-      "sucursal": "Saltos del Guairá",
-      "cotizaciones": [
-        {
-          "moneda": "Dólar Americano USD",
-          "compra": 6035,
-          "venta": 6155
-        },
-        {
-          "moneda": "Real BRL",
-          "compra": 1155,
-          "venta": 1210
-        },
-        {
-          "moneda": "Euro EUR",
-          "compra": 7400,
-          "venta": 7700
-        },
-        {
-          "moneda": "Peso Argentino ARS",
-          "compra": 5,
-          "venta": 6.5
         }
       ]
     }
