@@ -2,12 +2,11 @@ name: Actualizar Cotizaciones
 
 on:
   schedule:
-    # Se ejecuta de forma automática cada hora (de lunes a viernes)
     - cron: '0 * * * 1-5'
-  workflow_dispatch: # Te permite ejecutarlo manualmente desde la pestaña "Actions"
+  workflow_dispatch:
 
 permissions:
-  contents: write # Permiso crucial para que el bot pueda guardar el archivo JSON
+  contents: write
 
 jobs:
   build:
@@ -19,13 +18,16 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 # <-- Cambiado de 20 a 24 para evitar la obsolescencia
 
       - name: Instalar dependencias
         run: npm install
 
       - name: Ejecutar el Scraping
         run: node scraper.js
+        env:
+          # <-- Fuerza a las librerías internas a usar el motor Node 24 de forma segura
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true' 
 
       - name: Guardar cambios y subirlos a GitHub
         run: |
