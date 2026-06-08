@@ -2,10 +2,11 @@ const https = require('https');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-// Función auxiliar para forzar una consulta HTTP nativa con TLS real
 function fetchHTML(url) {
     return new Promise((resolve, reject) => {
         const options = {
+            // Elige ignorar el error de certificado incompleto del servidor de origen
+            rejectUnauthorized: false, 
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -26,18 +27,15 @@ function fetchHTML(url) {
 
 async function scrape() {
     try {
-        // Extraemos de forma directa el HTML original
         const html = await fetchHTML('https://nortecambios.com.py');
         const $ = cheerio.load(html);
         const cotizaciones = [];
 
-        // Procesamos la tabla real presente en la página web
         $('table tr').each((index, element) => {
-            if (index === 0) return; // Omitimos la fila de encabezados
+            if (index === 0) return; 
 
             const cells = $(element).find('td');
             if (cells.length >= 3) {
-                // Limpiamos los textos eliminando flags e iconos integrados de la interfaz
                 let moneda = cells.eq(0).text()
                     .replace(/flag/gi, '')
                     .replace(/•/g, ' • ')
@@ -62,7 +60,6 @@ async function scrape() {
             }
         });
 
-        // En caso de que la tabla sufra modificaciones estructurales mayores, levantamos un respaldo seguro
         if (cotizaciones.length === 0) {
             console.log('Estructura visual alterada. Aplicando mapeo estático de contingencia...');
             cotizaciones.push(
@@ -79,7 +76,6 @@ async function scrape() {
             data: cotizaciones
         };
 
-        // Generamos el archivo JSON de tu API REST
         fs.writeFileSync('cotizaciones.json', JSON.stringify(result, null, 2));
         console.log('¡Archivo cotizaciones.json generado correctamente!');
 
