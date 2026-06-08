@@ -4,20 +4,26 @@ const fs = require('fs');
 
 async function scrape() {
     try {
-        const { data } = await axios.get('https://www.nortecambios.com.py/', {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+        // Cabeceras completas de un navegador real para evadir bloqueos básicos de seguridad
+        const { data } = await axios.get('https://nortecambios.com.py', {
+            headers: { 
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'es-ES,es;q=0.8,en;q=0.6',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache'
+            },
+            timeout: 15000 // Tiempo de espera de 15 segundos máximo
         });
 
         const $ = cheerio.load(data);
         const cotizaciones = [];
 
-        // Filtramos y recorremos las filas de la tabla de cotizaciones
         $('table tr').each((index, element) => {
-            if (index === 0) return; // Omitir encabezado (Moneda, Compra, Venta)
+            if (index === 0) return; 
 
             const cells = $(element).find('td');
             if (cells.length >= 3) {
-                // Limpiamos los textos arrastrados por los iconos/flags del HTML
                 let moneda = cells.eq(0).text()
                     .replace(/flag/gi, '')
                     .replace(/•/g, ' • ')
@@ -27,10 +33,8 @@ async function scrape() {
                 let compraTexto = cells.eq(1).text().replace(/(arrow_upward|arrow_downward|drag_handle)/gi, '').trim();
                 let ventaTexto = cells.eq(2).text().replace(/(arrow_upward|arrow_downward|drag_handle)/gi, '').trim();
 
-                // Conversión limpia a números flotantes respetando el formato local
                 const parseNum = (str) => {
                     if (!str) return 0;
-                    // Maneja formatos con puntos de miles (6.030) o comas decimales (5,11)
                     return parseFloat(str.replace(/\./g, '').replace(',', '.'));
                 };
 
@@ -38,20 +42,23 @@ async function scrape() {
                     cotizaciones.push({
                         moneda: moneda,
                         compra: parseNum(compraTexto),
-                        venta: parseNum(ventaTexto)
+                        venta: parseNum(cleanVenta = ventaTexto)
                     });
                 }
             }
         });
 
+        if (cotizaciones.length === 0) {
+            throw new Error('La estructura de la tabla cambió o no se encontraron filas válidas.');
+        }
+
         const result = {
             success: true,
-            fuente: 'https://www.nortecambios.com.py/',
+            fuente: 'https://nortecambios.com.py',
             actualizado: new Date().toISOString(),
             data: cotizaciones
         };
 
-        // Guarda de forma síncrona el archivo JSON estático en el repositorio
         fs.writeFileSync('cotizaciones.json', JSON.stringify(result, null, 2));
         console.log('¡Archivo cotizaciones.json generado correctamente!');
 
