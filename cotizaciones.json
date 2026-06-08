@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "fuente": "https://nortecambios.com.py",
+  "actualizado": "2026-06-08T01:05:14.702Z",
+  "data": [
+    {
+      "moneda": "Dólar Americano USD",
+      "compra": 7950,
+      "venta": 8030
+    },
+    {
+      "moneda": "Real BRL",
+      "compra": 1240,
+      "venta": 1310
+    },
+    {
+      "moneda": "Euro EUR",
+      "compra": 8200,
+      "venta": 8700
+    }
+  ]
+}
