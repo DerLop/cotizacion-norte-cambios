@@ -1,20 +1,20 @@
 {
   "success": true,
-  "fuente": "https://www.nortecambios.com.py/",
-  "actualizado": "2026-06-08T01:36:44.600Z",
+  "fuente": "https://nortecambios.com.py (Procesamiento Matricial Integrado)",
+  "actualizado": "2026-06-08T01:42:43.533Z",
   "data": [
     {
       "sucursal": "Pedro Juan Caballero",
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 6030,
-          "venta": 6150
+          "compra": 7940,
+          "venta": 8020
         },
         {
           "moneda": "Real BRL",
-          "compra": 1150,
-          "venta": 1205
+          "compra": 1140,
+          "venta": 1200
         },
         {
           "moneda": "Euro EUR",
@@ -23,8 +23,8 @@
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -33,23 +33,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7165,
-          "venta": 7255
+          "compra": 7920,
+          "venta": 8000
         },
         {
           "moneda": "Real BRL",
-          "compra": 1311,
-          "venta": 1381
+          "compra": 1100,
+          "venta": 1160
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7450,
+          "venta": 7750
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -58,23 +58,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7180,
-          "venta": 7270
+          "compra": 7950,
+          "venta": 8030
         },
         {
           "moneda": "Real BRL",
-          "compra": 1312,
-          "venta": 1382
+          "compra": 1155,
+          "venta": 1215
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7400,
+          "venta": 7700
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -83,23 +83,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7195,
-          "venta": 7285
+          "compra": 7945,
+          "venta": 8025
         },
         {
           "moneda": "Real BRL",
-          "compra": 1313,
-          "venta": 1383
+          "compra": 1135,
+          "venta": 1195
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7400,
+          "venta": 7700
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -108,23 +108,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7210,
-          "venta": 7300
+          "compra": 7940,
+          "venta": 8020
         },
         {
           "moneda": "Real BRL",
-          "compra": 1314,
-          "venta": 1384
+          "compra": 1140,
+          "venta": 1200
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7400,
+          "venta": 7700
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -133,23 +133,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7225,
-          "venta": 7315
+          "compra": 7930,
+          "venta": 8010
         },
         {
           "moneda": "Real BRL",
-          "compra": 1315,
-          "venta": 1385
+          "compra": 1120,
+          "venta": 1180
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7420,
+          "venta": 7720
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     },
@@ -158,23 +158,23 @@
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 7240,
-          "venta": 7330
+          "compra": 7945,
+          "venta": 8025
         },
         {
           "moneda": "Real BRL",
-          "compra": 1316,
-          "venta": 1386
+          "compra": 1150,
+          "venta": 1210
         },
         {
           "moneda": "Euro EUR",
-          "compra": 7650,
-          "venta": 8100
+          "compra": 7400,
+          "venta": 7700
         },
         {
           "moneda": "Peso Argentino ARS",
-          "compra": 6,
-          "venta": 7.5
+          "compra": 4,
+          "venta": 6
         }
       ]
     }
