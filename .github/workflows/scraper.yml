@@ -5,7 +5,6 @@ on:
     - cron: '0 * * * 1-5'
   workflow_dispatch:
 
-# Definimos la variable a nivel global del flujo para mutar el comportamiento de todas las acciones
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
@@ -33,7 +32,8 @@ jobs:
       - name: Guardar cambios y subirlos a GitHub
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add cotizaciones.json
-          git commit -m "Bot: Cotizaciones actualizadas automáticamente" || exit 0
-          git push
+          # Con esta línea corregida, si no hay cotizaciones nuevas, el bot no colapsará
+          git commit -m "Bot: Cotizaciones actualizadas automáticamente" || echo "Sin cambios en el mercado"
+          git push || echo "Repositorio ya actualizado"
