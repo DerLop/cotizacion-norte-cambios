@@ -1,14 +1,14 @@
 {
   "success": true,
   "fuente": "https://www.nortecambios.com.py/ (Filtro Exclusivo Asunción)",
-  "actualizado": "2026-07-22T17:22:12.557Z",
+  "actualizado": "2026-07-22T19:23:22.819Z",
   "data": [
     {
       "sucursal": "Asunción",
       "cotizaciones": [
         {
           "moneda": "Dólar Americano USD",
-          "compra": 5960,
+          "compra": 5950,
           "venta": 6060
         },
         {
