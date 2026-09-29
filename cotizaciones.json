@@ -1,7 +1,7 @@
 {
   "success": true,
   "fuente": "https://www.nortecambios.com.py/ (Filtro Exclusivo Asunción)",
-  "actualizado": "2026-09-29T13:50:00.466Z",
+  "actualizado": "2026-09-29T19:10:34.139Z",
   "data": [
     {
       "sucursal": "Asunción",
@@ -13,7 +13,7 @@
         },
         {
           "moneda": "Real BRL",
-          "compra": 1085,
+          "compra": 1090,
           "venta": 1140
         },
         {
